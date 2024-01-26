@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dancing Script', cursive;
+    background: #FEFCF3;
+    
+
+}
+
+.social-main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.social-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 20px;
+    box-shadow: 2px 9px 35px -11px #0000006b;
+    z-index: 1;
+}
+
+.social-box p {
+    font-size: 22px;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+}
+
+.social-right {
+    padding: 15px 20px;
+    background: #d19b92;
+    margin-left: 20px;
+    z-index: 1;
+    position: relative;
+
+}
+
+.soical-button {
+    position: relative;
+    border: none;
+    background: #FFF;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 111;
+}
+
+.soical-button:focus {
+    border: none;
+}
+
+.soical-button.active .menutoggle:before,
+.soical-button.active .menutoggle:after,
+.soical-button.active .menutoggle span {
+    animation: none;
+}
+
+.soical-button.active .menutoggle span {
+    opacity: 0;
+}
+
+.soical-button.active .menutoggle:before {
+    transform: translateY(6px) rotate(135deg);
+}
+
+.soical-button.active .menutoggle:after {
+    transform: translateY(-8px) rotate(-135deg);
+}
+
+span.menutoggle {
+    width: 30px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+}
+
+span.menutoggle:before,
+span.menutoggle:after,
+span.menutoggle span {
+    background: #000;
+    content: "";
+    display: block;
+    height: 3px;
+    border-radius: 8px;
+    margin: 4px 0;
+    transition: 0.5s;
+}
+
+span.menutoggle:before {
+    -webkit-animation: toggleshow 1s infinite ease-in-out alternate;
+}
+
+span.menutoggle span {
+    -webkit-animation: toggleshow 1s infinite ease-in-out alternate forwards 200ms;
+    animation: toggleshow 1s infinite ease-in-out alternate forwards 200ms;
+}
+
+span.menutoggle:after {
+    -webkit-animation: toggleshow 1s infinite ease-in-out alternate forwards 400ms;
+    animation: toggleshow 1s infinite ease-in-out alternate forwards 400ms;
+}
+
+@webkit-keyframes toggleshow {
+    0% {
+        width: 100%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes toggleshow {
+    0% {
+        width: 100%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.social-icon {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    top: 50%;
+    right: -48px;
+    transform: translatey(-50%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.social-icon.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.social-icon i {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ececec;
+    font-size: 26px;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+
+
+    transition-duration: 0.3s;
+    color: #FFF;
+}
+
+
+.social-icon.open i:nth-of-type(1) {
+    transform: rotate(-90deg) translateX(120px) rotate(90deg);
+    transition-delay: 0s;
+    background: #4e71ba;
+}
+
+.social-icon.open i:nth-of-type(2) {
+    transform: rotate(-45deg) translateX(120px) rotate(45deg);
+    transition-delay: 0.1s;
+    background: #E4405F;
+}
+
+.social-icon.open i:nth-of-type(3) {
+    transform: rotate(0deg) translateX(120px) rotate(0deg);
+    transition-delay: 0.2s;
+    background: #0A66C2;
+}
+
+.social-icon.open i:nth-of-type(4) {
+    transform: rotate(45deg) translateX(120px) rotate(-45deg);
+    transition-delay: 0.3s;
+    background: #00acee;
+
+}
+
+.social-icon.open i:nth-of-type(5) {
+    transform: rotate(90deg) translateX(120px) rotate(-90deg);
+    transition-delay: 0.4s;
+    background: #41935c;
+}
+.social-icon.open i:nth-of-type(6) {
+    transform: rotate(133deg) translateX(126px) rotate(255deg);
+    transition-delay: 0.4s;
+    background: #252525;
+}
+
+@media only screen and (max-width:767px) {
+    .social-box {
+        left: 37%;
+    }
+
+}
+
+@media only screen and (max-width:480px) {
+    .social-box {
+        left: 130px;
+    }
+
+    .social-icon {
+        width: 100px;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.7);
+        right: -26px;
+    }
+
+    .social-icon i {
+
+        right: 27px;
+        top: 30px;
+
+    }
+}

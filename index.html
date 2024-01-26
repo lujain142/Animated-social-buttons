@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Animated social buttons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="social-main">
+        <div class="social-box">
+            <p>Soical Bar</p>
+            <div class="social-right">
+                <button class="soical-button"><span class="menutoggle"><span></span></span></button>
+            </div>
+     
+            <div class="social-icon">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <i class="fa fa-github-alt" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var socialButton = document.querySelector('.soical-button');
+        var socialIcon = document.querySelector('.social-icon');
+
+        socialButton.addEventListener('click', function() {
+            socialButton.classList.toggle('active');
+            socialIcon.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
